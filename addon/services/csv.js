@@ -66,7 +66,7 @@ export default Ember.Service.extend({
 
         str += line + '\r\n';
       }
-      return str;
+      return str.replace(/"/g,"");
     }
 
     var csv = JSON2CSV(data);
